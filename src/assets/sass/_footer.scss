@@ -1,0 +1,106 @@
+@use "./partials/variables.scss" as *;
+@use "./partials/breakpoints.scss" as *;
+
+footer {
+    background-color: $primary;
+    color: #fff;
+    width: 100%;
+    position: relative;
+
+    .logo-img-container {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 6px 2px #4747470e;
+        width: 170px;
+        top: -2.5rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+        font-size: 15px;
+        padding: 1.4rem 2rem 1rem;
+    
+        .text {
+            margin-top: 2.2rem;
+            text-align: center;
+        }
+    
+        .cnpj {
+            text-align: center;
+        }
+    
+        .links {
+            a {
+                color: #fff;
+                transition: 0.2s all;
+                background-color: $secondary;
+                padding: 6px 8px;
+    
+                &:hover {
+                    background-color: #fff;
+                    color: $secondary;
+                }
+            }    
+        }
+    
+        .info {
+            gap: 1rem;
+            p {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                width: 400px;
+            }
+        }    
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        gap: 0.6rem;
+        margin: 1.3rem 2rem 1.2rem;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            svg {
+                transition: 0.1s;
+            }
+            &:hover {
+                svg {
+                    color: #adf48a;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-md) {
+        .logo-img-container {
+            width: 230px;
+            top: -3.4rem;
+        }
+
+        .container {
+            font-size: 16px;
+            padding-top: 1.5rem;
+            .text {
+                margin-top: 3.1rem;
+            }
+        }
+        
+        .copyright {
+            gap: 1rem;
+        }
+    }
+    @media (min-width: $breakpoint-lg) {
+        .copyright {
+            gap: 2rem;
+        }
+    }
+}

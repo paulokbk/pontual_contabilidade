@@ -1,0 +1,121 @@
+@use "../partials/variables.scss" as *;
+@use "../partials/breakpoints.scss" as *;
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem 1rem;
+    text-align: center;
+    position: relative;
+    min-height: 75vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -38px; /* Ajuste a posição vertical */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 75px solid transparent;
+        border-right: 75px solid transparent;
+        border-bottom: 70px solid #fff;
+        z-index: 1;
+    }
+
+    .container {
+        z-index: 2;
+    }
+    
+    .container.content {
+        p {
+            text-align: justify;
+        }
+
+        .emphasized {
+            border-left: solid 3px $primary;
+            padding-left: 1rem;
+            color: $gray;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            justify-self: center;
+            margin-top: 1.2rem;
+        }
+    }
+
+    .container.image-container {
+        .gatsby-image-wrapper {
+            border-radius: 4px;
+            max-height: 400px;
+        }
+        .stats {
+            img {
+                width: 45px;
+            }
+            p {
+                text-align: start;
+                margin: 0;
+                line-height: 1.3rem;
+
+                strong {
+                    color: $primary;
+                    font-size: 1.5rem;
+                }
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        flex-direction: row-reverse;
+        padding: 5rem 2rem;
+        text-align: start;
+
+        .container.content {
+            margin-top: 3rem;
+            .btn {
+                justify-self: flex-start;
+            }
+        }
+    }
+
+    @media (min-width: 1350px) {
+        .container.content {
+            align-self: flex-start;
+        }
+
+        .container.image-container {
+            .stats {
+                img {
+                    width: 48px;
+                }
+                p {
+                    text-align: start;
+                    margin: 0;
+                    line-height: 1.3rem;
+    
+                    strong {
+                        color: $primary;
+                        font-size: 1.6rem;
+                    }
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }        
+    }
+
+    @media(min-width: 1700px) {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}

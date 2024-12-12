@@ -1,0 +1,237 @@
+@use "./partials/variables.scss" as *;
+@use "./partials/breakpoints.scss" as *;
+
+.header {
+    margin: 0 auto;
+    padding: 0.6rem;
+    color: #ffffff;
+    transition: 0.2s all;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    flex-wrap: wrap;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #9999991e;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    @media (max-width: ($breakpoint-sm - 1)) {
+        #header-navbar-collapse {
+            max-width: 90%;
+        }
+    }
+    @media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-lg - 1)) {
+        #header-navbar-collapse {
+            max-width: 60%;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .logo {
+        gap: 0.8rem;
+        margin-left: 1rem;
+
+        strong {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: -3px;
+        }
+    }
+
+    .container-menu {
+        svg {
+            cursor: pointer;
+            transition: 0.2s;
+            padding: 3px;
+            background-color: #48749c65;
+            padding: 6px;
+            border-radius: 2px;
+
+            &:hover {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .topper-menu {
+        background-color: #1d80bed5;
+
+        svg {
+            background-color: #77b3ce42;
+            cursor: pointer;
+            transition: 0.25s;
+            border-radius: 50%;
+            padding: 3px;
+
+            &:hover {
+                background-color: #f9f9f9;
+                color: $primary;
+            }
+        }
+    }
+
+    #header-navbar-collapse {
+        background-color: $primary;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100%;
+        transition: 0.8s;
+        z-index: 9;
+
+        /* Scroll */
+        height: 100%;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #d1d1d1;
+            cursor: pointer;
+        }
+
+        .nav-link {
+            user-select: none;
+            transition: 0.1s;
+            color: inherit;
+
+            span {
+                position: relative;
+            }
+
+            &.active span::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 110%;
+                height: 2px;
+                background: #a0cde2;
+                animation: grow 500ms;
+
+                @keyframes grow {
+                    from {
+                        width: 0%;
+                    } to {
+                        width: 110%;
+                    }
+                }
+            }
+        }
+    }
+
+    #header-navbar-collapse.visible-menu {
+        right: 0;
+    }
+
+    @media (max-width: 400px) {
+        .logo img {
+            height: 36px !important;
+            width: auto !important;
+        }
+        .navbar-custom {
+            width: 100%;
+            margin-top: 6px;
+            .menu-icon {
+                width: 100%;
+            }
+        }
+    }
+        
+    @media (max-width: $breakpoint-lg) {
+        .logo {
+            img {
+                width: 40px;
+                height: auto;
+            }
+        }
+
+        #header-navbar-collapse {
+            box-shadow: 0 0 10px 6px #63636315;
+        }
+
+        .nav-link {
+            border-bottom: solid 1px;
+            border-color: #1078b84b;
+            padding: 1.2rem 1.5rem;
+            font-size: 19px;
+
+            &:hover {
+                background-color: #1d80bea1;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        padding: 0.6rem 3rem;
+
+        .logo strong {
+           font-size: 22px;
+        }
+
+        #header-navbar-collapse {
+            position: relative;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            margin: 0;
+
+            .nav-link {
+                font-size: 17px;
+                padding: 0.3rem 1rem;
+                
+                &.active span::after {
+                    width: 105%;
+                    background: #c9dfe97a;
+                    animation: grow 500ms;
+
+                    @keyframes grow {
+                        from {
+                            width: 0%;
+                        } to {
+                            width: 105%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header.scrolled {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(90, 147, 221, 0.151);
+        z-index: 1;
+        backdrop-filter: blur(3px);
+        filter: brightness(0.8);
+    }
+
+    &::after {
+        display: none;
+    }
+
+    .logo, .navbar-custom {
+        z-index: 2;
+    }
+}
