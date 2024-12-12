@@ -96,7 +96,7 @@ const Footer = () => {
 
         <div className="copyright d-flex justify-content-center flex-wrap">
           <span style={{textTransform: "uppercase"}}>
-            Copyright © {new Date().getFullYear()} - {companyData.name} - Todos os direitos reservados
+            Copyright ©  2024 - {companyData.name} - Todos os direitos reservados
           </span>
           {devData && (
             <a href={devData?.blog} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center gap-1">
