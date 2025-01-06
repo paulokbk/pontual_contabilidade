@@ -22,9 +22,10 @@ const Sobre = () => {
         <h2 className="small-title">Sobre nós</h2>
         <strong className="title">Eficiência, qualidade e atendimento ágil</strong>
         <p className="paragraph mt-3">
-          A {companyData.name} oferece soluções estratégicas e personalizadas para simplificar sua
-          gestão financeira e maximizar resultados. Oferecemos um atendimento eficiente e sob medida,
-          unindo expertise tradicional à inovação e praticidade das tecnologias mais avançadas do mercado.
+          A {companyData.name} oferece soluções estratégicas e personalizadas para simplificar sua gestão financeira e 
+          maximizar resultados, unindo a expertise tradicional à inovação e praticidade das tecnologias mais 
+          avançadas do mercado. Com excelência, realizamos serviços contábeis online para empresas de todos os portes, 
+          atendendo qualquer cidade do estado de Goiás, sempre com um atendimento eficiente e sob medida.
         </p>
         <p className="emphasized">
           <em>

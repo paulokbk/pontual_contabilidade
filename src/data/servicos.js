@@ -28,6 +28,11 @@ const servicos = [
         name: "Serviços Jurídicos e Fiscais",
         description: "Abertura e fechamento de empresas, alterações contratuais e declaração de imposto de renda, com total suporte legal.",
         imagePath: "servicos/servicos-juridicos-e-fiscais.jpg"
+    },
+    {
+        name: "MEI - Microempreendedor Individual",
+        description: "Assessoria completa para formalização, regularização e gestão de MEIs, garantindo benefícios e segurança jurídica.",
+        imagePath: "servicos/mei-microempreendedor-individual.webp"
     }
 ];
 
