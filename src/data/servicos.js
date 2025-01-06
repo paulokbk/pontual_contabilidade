@@ -32,7 +32,7 @@ const servicos = [
     {
         name: "MEI - Microempreendedor Individual",
         description: "Assessoria completa para formalização, regularização e gestão de MEIs, garantindo benefícios e segurança jurídica.",
-        imagePath: "servicos/mei-microempreendedor-individual.webp"
+        imagePath: "servicos/mei-microempreendedor-individual.jpg"
     }
 ];
 
