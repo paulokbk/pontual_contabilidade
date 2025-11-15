@@ -1,8 +1,5 @@
 import * as React from "react"
 
-// ** Gatsby imports
-import { StaticImage } from "gatsby-plugin-image";
-
 // ** Third Part Components
 import { Instagram, Mail } from "react-feather"
 import { IoLocationSharp } from "@react-icons/all-files/io5/IoLocationSharp";
@@ -17,8 +14,6 @@ import getGitHubData from "../utils/getProfileGithub";
 
 const Footer = () => {
   const [devData, setDevData] = React.useState(null);
-  
-  const logoPath = "../assets/images/logo/logo-pontual-white.png"
 
   const fetchDevData = async () => {
     const link = await getGitHubData("carol-frazao");
@@ -31,14 +26,6 @@ const Footer = () => {
     
   return (
       <footer id="footer">
-        <StaticImage 
-          src={logoPath}
-          alt="Logo"
-          width={250}
-          placeholder="blurred"
-          className="logo-img-container"
-        />
-
         <div className="container">
           <div className="text">
             Entre em contato hoje mesmo e transforme seus planos empresariais em conquistas reais!
