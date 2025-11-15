@@ -1,9 +1,9 @@
 const companyData = {
     name: "Pontual Contabilidade",
     cnpj: "53.381.522/0001-47",
-    email: "pontualcontabilidadecn@gmail.com",
-    phone: "64 9342-9371",
-    whatsapp: "556493429371",
+    email: "jgdacunha12@gmail.com",
+    phone: "64 99279-2727",
+    whatsapp: "5564992792727",
     instagram: "https://www.instagram.com/pontualcontabilidadecn",
     address: ["Av. Osmundo Gonzaga de Menezes, Qd. 21 Lt. 15", "Olegário Pinto - Caldas Novas/GO - CEP 75691-546"],
     mapLink: "https://www.google.com/maps/search/?api=1&query=Av%20Osmundo%20Gonzaga%20de%20Menezes,%20Qd.%2021%20Lt.%2015,%20bairro%20Oleg%C3%A1rio%20Pinto,%20Caldas%20Novas,%20Goias,%20Brazil%2075691546",
