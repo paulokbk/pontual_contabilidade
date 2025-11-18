@@ -35,7 +35,7 @@ const Footer = () => {
             <a href={`https://wa.me/${companyData.whatsapp}`} target="_blank" rel="noopener noreferrer" title="WhatsApp">
               <IoLogoWhatsapp size={20} />
             </a>
-            <a href={`mailto:${companyData.email}`} target="_blank" rel="noopener noreferrer" title="E-mail">
+            <a href={`mailto:${companyData.email}`} title="E-mail">
               <Mail size={20} />
             </a>
             <a href={companyData.instagram}

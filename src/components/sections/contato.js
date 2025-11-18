@@ -64,7 +64,7 @@ const Contato = () => {
                 </div>
 
                 <div className="info-container email">
-                    <a href={`mailto:${companyData.email}`} target="_blank" rel="noreferrer noopener">
+                    <a href={`mailto:${companyData.email}`}>
                         <Mail size={22} />
                     </a>
                 </div>
